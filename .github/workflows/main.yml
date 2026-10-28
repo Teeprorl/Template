@@ -2,6 +2,7 @@ name: Template Automatisation
 
 on:
  workflow_dispatch:
+ push:
 
 jobs:
   test:
