@@ -11,5 +11,6 @@ jobs:
     steps:
       - name: affichage
         run: |
-          mv _REPO_NAME_ "${{ github.repository_name }}"
+          echo "${{ github.repository_name }}"
+          echo "${{ github.path }}"
           echo "test"
