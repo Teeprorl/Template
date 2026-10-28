@@ -6,4 +6,4 @@ on:
     jobs:
        Rename-Folder:
         run: |
-          mv _REPO_NAME_ ${{ github.event.repository.name }}
+          cat ${{ github.repository }}
