@@ -10,5 +10,6 @@ jobs:
 
     steps:
       - name: affichage
-        run: echo "${{ github.repository }}"
-        run: echo "test"
+        run: |
+          echo "${{ github.repository }}"
+          echo "test"
