@@ -4,5 +4,6 @@ on:
  workflow_dispatch:
 
 jobs:
+  renome-folder:
     steps:
       run: echo "${{ github.repository }}"
