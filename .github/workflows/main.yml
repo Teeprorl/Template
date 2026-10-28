@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: affichage
         run: |
-          repo_name=$(echo "${{ github.repository }}" | grep "(?<=Teeprorl/*)")
-          echo "$repo_name"
-          echo "${{ github.path }}"
-          echo "test"
+          touch file.txt
+          chmod 755 file.txt
+          echo ${{ github.repository }} > file.txt
+          sed -i -e 's/${{ github.owner_name }}/\//' file.txt
