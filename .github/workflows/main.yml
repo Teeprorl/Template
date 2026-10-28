@@ -1,0 +1,21 @@
+name: Template Automatisation
+
+on: [workflow_dispatch, push]
+env:
+ repo_name:
+ GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  rename-folder:
+    runs-on: [ubuntu-latest]
+
+    steps:
+      - name: affichage
+        run: |
+          repo_name=${{ github.repository_owner }}
+          touch file.txt
+          chmod 755 file.txt
+          echo ${{ github.repository }} > file.txt
+          sed -i 's/$repo_name/\//' file.txt
+
+      - name: commit
