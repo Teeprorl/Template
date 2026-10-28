@@ -5,4 +5,4 @@ on:
 
 jobs:
   steps:
-    run: cat ${{ github.repository }}
+    run: echo "${{ github.repository }}"
