@@ -7,4 +7,5 @@ jobs:
   rename-folder:
   runs-on: ubuntu-latest
     steps:
-      run: cat ${{ github.repository }}
+      run:
+           - cat ${{ github.repository }}
