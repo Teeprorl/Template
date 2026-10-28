@@ -14,5 +14,6 @@ jobs:
       - name: affichage
         run: |
           repo_name=$(echo "${{ github.repository }}" | grep "(?<=Teeprorl/*")
+          echo "$repo_name"
           echo "${{ github.path }}"
           echo "test"
