@@ -7,5 +7,6 @@ on:
 jobs:
   rename-folder:
   runs-on: self-hosted
-    steps:
+
+  steps:
      - run: echo "${{ github.repository }}"
