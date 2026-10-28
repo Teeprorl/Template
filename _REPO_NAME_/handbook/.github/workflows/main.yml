@@ -1,4 +1,4 @@
 on:
- clone:
+ workflow_dispatch:
 
 run: mv _REPO_NAME_ ${{ github.event.repository.name }}
