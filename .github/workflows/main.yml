@@ -9,5 +9,6 @@ jobs:
     runs-on: [gpu]
 
     steps:
-       - run: echo "${{ github.repository }}"
-       - run: echo "test"
+      affichage:
+         - run: echo "${{ github.repository }}"
+         - run: echo "test"
