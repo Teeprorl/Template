@@ -4,7 +4,6 @@ on:
  workflow_dispatch:
 
 jobs:
-  rename-folder:
     steps:
     runs-on: [self-hosted]
      - run: echo "${{ github.repository }}"
