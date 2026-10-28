@@ -16,4 +16,4 @@ jobs:
           touch file.txt
           chmod 755 file.txt
           echo ${{ github.repository }} > file.txt
-          sed -i -e 's/${{ github.owner_name }}/\//' file.txt
+          sed -i 's/${{ github.reposiotry_owner }}/\//' file.txt
