@@ -3,7 +3,7 @@ name: Template Automatisation
 on:
  workflow_dispatch:
 
-    jobs:
-       Rename-Folder:
-        run: |
-          cat ${{ github.repository }}
+jobs:
+  Rename-Folder:
+   run: |
+     cat ${{ github.repository }}
