@@ -4,6 +4,5 @@ on:
  workflow_dispatch:
 
 jobs:
-  rename-folder:
   steps:
     run: cat ${{ github.repository }}
