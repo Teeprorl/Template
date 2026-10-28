@@ -4,7 +4,6 @@ on:
  workflow_dispatch:
 
 jobs:
-  rename-folder:
   runs-on: ubuntu-latest
   steps:
     run: cat ${{ github.repository }}
