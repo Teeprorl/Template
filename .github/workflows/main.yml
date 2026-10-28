@@ -19,7 +19,7 @@ jobs:
           chmod 755 file.txt
           echo ${{ github.repository }} > file.txt
           sed -i 's/$repo_name/\//' file.txt
-          cat ${{ secrets.GITHUB_TOKEN }}
+          cat ${GH_TOKEN]
 
       - name: commit
         run: |
