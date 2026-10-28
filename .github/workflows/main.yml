@@ -5,7 +5,7 @@ on:
  push:
 
 jobs:
-  test:
+  rename-folder:
   runs-on: [self-hosted]
     steps:
      - run: echo "${{ github.repository }}"
