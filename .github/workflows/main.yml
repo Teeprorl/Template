@@ -4,6 +4,7 @@ on:
  workflow_dispatch:
 
 jobs:
+  test:
     steps:
     runs-on: [self-hosted]
      - run: echo "${{ github.repository }}"
