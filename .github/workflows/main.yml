@@ -3,6 +3,8 @@ name: Template Automatisation
 on:
  workflow_dispatch:
  push:
+env:
+ repo_name:
 
 jobs:
   rename-folder:
@@ -11,6 +13,6 @@ jobs:
     steps:
       - name: affichage
         run: |
-          echo "${{ github.repository_name }}"
+          repo_name = ${{ echo "${{ github.repository }}" | grep "(?<=Teeprorl/*" }}
           echo "${{ github.path }}"
           echo "test"
