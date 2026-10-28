@@ -1,8 +1,6 @@
 name: Template Automatisation
 
-on:
- workflow_dispatch:
- push:
+on: [workflow_dispatch, push]
 env:
  repo_name:
  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -19,8 +17,5 @@ jobs:
           chmod 755 file.txt
           echo ${{ github.repository }} > file.txt
           sed -i 's/$repo_name/\//' file.txt
-          cat ${GH_TOKEN}
 
       - name: commit
-        run: |
-          
