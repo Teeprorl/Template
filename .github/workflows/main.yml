@@ -1,4 +1,9 @@
+name: Template Automatisation
+
 on:
  workflow_dispatch:
 
-run: mv _REPO_NAME_ ${{ github.event.repository.name }}
+    jobs:
+       Rename-Folder:
+        run: |
+          mv _REPO_NAME_ ${{ github.event.repository.name }}
