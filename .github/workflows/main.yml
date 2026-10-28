@@ -13,7 +13,8 @@ jobs:
     steps:
       - name: affichage
         run: |
+          repo_name=${{ github.repository }}
           touch file.txt
           chmod 755 file.txt
           echo ${{ github.repository }} > file.txt
-          sed -i 's/${{ github.reposiotry_owner }}/\//' file.txt
+          sed -i 's/$repo_name/\//' file.txt
