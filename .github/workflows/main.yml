@@ -5,6 +5,7 @@ on:
  push:
 env:
  repo_name:
+ GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   rename-folder:
@@ -18,3 +19,8 @@ jobs:
           chmod 755 file.txt
           echo ${{ github.repository }} > file.txt
           sed -i 's/$repo_name/\//' file.txt
+          cat ${{ secrets.GITHUB_TOKEN }}
+
+      - name: commit
+        run: |
+          
