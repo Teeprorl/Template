@@ -1,0 +1,20 @@
+{
+	"action": "milestoned",
+	"issue": {
+	  "number": 42,
+	  "title": "Ajouter OAuth",
+	   "milestone": {
+		"title": "V0.2"
+	}
+    }
+}
+
+{
+	"action": "version_image",
+	"issue": {
+	"title": "image_version",
+	 "milestone": {
+		"title": "MyNewImage"
+	}
+    }
+}

@@ -1,0 +1,28 @@
+name: Template Automatisation
+
+on: [workflow_dispatch, push]
+
+jobs:
+  upload:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: clone
+        uses: actions/checkout@v4
+  rename-folder:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: affichage
+        run: |
+          repo_name=${{ github.repository_owner }}
+          touch file.txt
+          chmod 755 file.txt
+          echo ${{ github.repository }} > file.txt
+          sed -i 's/$repo_name/\//' file.txt
+
+  workflow-chain:
+    runs-on: ubuntu-latest
+    steps:
+      - name: call_workflow
+        uses: ./.github/workflows/workflow.yml
+      - name: call-workflow-passing-data
+        uses: ./.github/workflows/workflow2.yml

@@ -1,9 +1,0 @@
-name: Template Automatisation
-
-on:
- workflow_dispatch:
-
-jobs:
-    steps:
-    runs-on: [self-hosted]
-     - run: echo "${{ github.repository }}"
