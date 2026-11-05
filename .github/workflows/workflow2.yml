@@ -1,0 +1,16 @@
+on:
+  workflow_call:
+    inputs:
+      config_path:
+        required: true
+        type: string
+    secrets:
+      personal_access_token:
+        required: true
+jobs:
+ link:
+  uses: ./.github/worklfows/workflow.yml@action
+  with:
+   config_path: .github/workflows/
+  secrets:
+    token: ${{ secrets.GITHUB_TOKEN }}

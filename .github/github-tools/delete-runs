@@ -1,0 +1,16 @@
+#!/bin/bash
+
+declare -i var
+x=0
+
+gh run list > fichier.txt
+grep -oE '[0-9]{9,11}' fichier.txt > fichier2.txt
+
+
+while read ligne; do
+	gh run delete "$ligne"
+	(( x++ ))
+	echo "$x"
+done < fichier2.txt
+
+rm -rf fichier.txt fichier2.txt
